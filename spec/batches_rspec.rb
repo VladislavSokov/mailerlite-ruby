@@ -19,7 +19,7 @@ end
 
 # Set up the test for the `Batch` class
 RSpec.describe MailerLite::Batch do
-  let(:client) { MailerLite::Client.new }
+  let(:client) { MailerLite::Client.new(api_token: 'dummy_token') }
   let(:batch) { described_class.new(client: client) }
 
   describe '#request' do

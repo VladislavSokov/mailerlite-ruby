@@ -19,7 +19,7 @@ end
 
 # Set up the test for the `Timezones` class
 RSpec.describe MailerLite::Timezones do
-  let(:client) { MailerLite::Client.new }
+  let(:client) { MailerLite::Client.new(api_token: 'dummy_token') }
   let(:timezones) { described_class.new(client: client) }
 
   describe '#list' do

@@ -19,7 +19,7 @@ end
 
 # Set up the test for the `Webhooks` class
 RSpec.describe MailerLite::Webhooks do
-  let(:client) { MailerLite::Client.new }
+  let(:client) { MailerLite::Client.new(api_token: 'dummy_token') }
   let(:webhooks) { described_class.new(client: client) }
 
   describe '#create' do
