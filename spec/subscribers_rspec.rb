@@ -19,7 +19,7 @@ end
 
 # Set up the test for the `Subscribers` class
 RSpec.describe MailerLite::Subscribers do
-  let(:client) { MailerLite::Client.new }
+  let(:client) { MailerLite::Client.new(api_token: 'dummy_token') }
   let(:subscribers) { described_class.new(client: client) }
 
   describe '#fetch' do

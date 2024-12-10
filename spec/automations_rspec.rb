@@ -19,7 +19,7 @@ end
 
 # Set up the test for the `Automations` class
 RSpec.describe MailerLite::Automations do
-  let(:client) { MailerLite::Client.new }
+  let(:client) { MailerLite::Client.new(api_token: 'dummy_token') }
   let(:automations) { described_class.new(client: client) }
 
   describe '#get' do

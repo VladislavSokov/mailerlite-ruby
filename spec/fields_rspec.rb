@@ -19,7 +19,7 @@ end
 
 # Set up the test for the `Fields` class
 RSpec.describe MailerLite::Fields do
-  let(:client) { MailerLite::Client.new }
+  let(:client) { MailerLite::Client.new(api_token: 'dummy_token') }
   let(:fields) { described_class.new(client: client) }
 
   describe '#get' do
